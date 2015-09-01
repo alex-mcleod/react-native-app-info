@@ -1,23 +1,26 @@
 'use strict';
 
 
- var { RNAppInfo } = require('react-native').NativeModules;
+var { RNAppInfo } = require('react-native').NativeModules;
 
 var AppInfo = {
-	getInfoVersion: function (){
+	getInfoVersion: function() {
 		return RNAppInfo.version;
 	},
-	getInfoShortVersion: function (){
+	getInfoShortVersion: function() {
 		return RNAppInfo.shortVersion;
 	},
-	getInfoBundleIdentifier: function (){
+	getInfoBundleIdentifier: function() {
 		return RNAppInfo.bundleIdentifier;
 	},
-	getInfoName: function (){
+	getInfoName: function() {
 		return RNAppInfo.name;
 	},
-	getInfoDisplayName: function (){
+	getInfoDisplayName: function() {
 		return RNAppInfo.displayName;
+	},
+	getInfoDeviceName: function() {
+		return RNAppInfo.getInfoDeviceName;	
 	},
 	setNetworkActivityIndicatorVisible: function (visible) {
 		var appInfo = require('react-native').NativeModules.RNAppInfo;
